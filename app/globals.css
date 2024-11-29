@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "cabinet";
+  src: url("/fonts/cabinet.ttf");
+}
+
+@font-face {
+  font-family: "thunder";
+  src: url("/fonts/thunder.ttf");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
