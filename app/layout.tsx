@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>
+        <header className="w-full sticky top-0 z-50">
           <Navbar />
         </header>
         <main>{children}</main>
