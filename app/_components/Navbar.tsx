@@ -84,7 +84,7 @@ export function Navbar() {
 export const Logo = () => {
   return (
     <Link
-      href="#"
+      href="/"
       className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
     >
       <motion.div
@@ -109,7 +109,7 @@ export const Logo = () => {
 export const LogoIcon = () => {
   return (
     <>
-      <Link href="#" className="dark:hidden block">
+      <Link href="/" className="dark:hidden block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 260 300"
@@ -119,11 +119,11 @@ export const LogoIcon = () => {
             points="100,280 40,20 190,140 10,140 160,20"
             fill="none"
             stroke="black"
-            stroke-width="5"
+            stroke-width="10"
           />
         </svg>
       </Link>
-      <Link href="#" className="hidden dark:block">
+      <Link href="/" className="hidden dark:block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 260 300"
@@ -133,7 +133,7 @@ export const LogoIcon = () => {
             points="100,280 40,20 190,140 10,140 160,20"
             fill="none"
             stroke="black"
-            stroke-width="5"
+            stroke-width="10"
           />
         </svg>
       </Link>
