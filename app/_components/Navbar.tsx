@@ -12,6 +12,7 @@ import {
   IconBrandYoutube,
   IconBrandGithub,
   IconBrandDiscord,
+  IconBrandBlogger,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -47,6 +48,13 @@ export function Navbar() {
         <IconPageBreak className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
+    {
+      label: "Blog",
+      href: "/blog",
+      icon: (
+        <IconBrandBlogger className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
   ];
   const [open, setOpen] = useState(false);
   return (
@@ -60,7 +68,7 @@ export function Navbar() {
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
-            <div className="mt-8 flex flex-col gap-2 font-parkinsans">
+            <div className="mt-8 flex flex-col gap-2 font-parkinsans uppercase">
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
@@ -111,9 +119,9 @@ export const Logo = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "backOut", delay: 0.4 }}
-        className="font-bold text-xl text-black dark:text-white whitespace-pre font-parkinsans uppercase"
+        className="font-medium text-xl text-black dark:text-white whitespace-pre font-parkinsans uppercase"
       >
-        Saad Sayyed
+        Hi there.
       </motion.span>
     </Link>
   );
