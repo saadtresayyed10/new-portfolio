@@ -77,13 +77,13 @@ export function Navbar() {
           <div>
             <div className="flex justify-start items-center gap-x-6">
               <Link href="/">
-                <IconBrandLinkedin className="w-4 h-4 text-muted-foreground" />
+                <IconBrandLinkedin className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
               </Link>
               <Link href="/">
-                <IconBrandGithub className="w-4 h-4 text-muted-foreground" />
+                <IconBrandGithub className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
               </Link>
               <Link href="/">
-                <IconBrandDiscord className="w-4 h-4 text-muted-foreground" />
+                <IconBrandDiscord className="w-4 h-4 text-neutral-700 dark:text-neutral-300" />
               </Link>
             </div>
           </div>
