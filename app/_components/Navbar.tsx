@@ -2,10 +2,13 @@
 import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {
-  IconArrowLeft,
+  IconPageBreak,
   IconBrandTabler,
   IconSettings,
   IconUserBolt,
+  IconBrandLinkedin,
+  IconBrandX,
+  IconBrandInstagram,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -15,31 +18,31 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const links = [
     {
-      label: "Dashboard",
+      label: "Projects",
       href: "#",
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Profile",
+      label: "About",
       href: "#",
       icon: (
         <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Settings",
+      label: "Services",
       href: "#",
       icon: (
         <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Logout",
+      label: "Resume",
       href: "#",
       icon: (
-        <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconPageBreak className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
@@ -55,28 +58,24 @@ export function Navbar() {
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
-            <div className="mt-8 flex flex-col gap-2">
+            <div className="mt-8 flex flex-col gap-2 font-parkinsans">
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
             </div>
           </div>
           <div>
-            <SidebarLink
-              link={{
-                label: "Manu Arora",
-                href: "#",
-                icon: (
-                  <Image
-                    src="https://assets.aceternity.com/manu.png"
-                    className="h-7 w-7 flex-shrink-0 rounded-full"
-                    width={50}
-                    height={50}
-                    alt="Avatar"
-                  />
-                ),
-              }}
-            />
+            <div className="flex justify-start items-center gap-x-6">
+              <Link href="/">
+                <IconBrandLinkedin className="w-4 h-4 text-muted-foreground" />
+              </Link>
+              <Link href="/">
+                <IconBrandX className="w-4 h-4 text-muted-foreground" />
+              </Link>
+              <Link href="/">
+                <IconBrandInstagram className="w-4 h-4 text-muted-foreground" />
+              </Link>
+            </div>
           </div>
         </SidebarBody>
       </Sidebar>
@@ -89,11 +88,19 @@ export const Logo = () => {
       href="#"
       className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "backOut", delay: 0.4 }}
+        className="w-8 h-8"
+      >
+        <LogoIcon />
+      </motion.div>
       <motion.span
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="font-medium text-black dark:text-white whitespace-pre font-parkinsans uppercase"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "backOut", delay: 0.4 }}
+        className="font-bold lg:text-xl text-black dark:text-white whitespace-pre font-parkinsans uppercase"
       >
         Saad Sayyed
       </motion.span>
@@ -102,11 +109,35 @@ export const Logo = () => {
 };
 export const LogoIcon = () => {
   return (
-    <Link
-      href="#"
-      className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
-    >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
-    </Link>
+    <>
+      <Link href="#" className="dark:hidden block">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 260 300"
+          className="w-full h-full"
+        >
+          <polygon
+            points="100,280 40,20 190,140 10,140 160,20"
+            fill="none"
+            stroke="black"
+            stroke-width="5"
+          />
+        </svg>
+      </Link>
+      <Link href="#" className="hidden dark:block">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 260 300"
+          className="w-full h-full"
+        >
+          <polygon
+            points="100,280 40,20 190,140 10,140 160,20"
+            fill="none"
+            stroke="black"
+            stroke-width="5"
+          />
+        </svg>
+      </Link>
+    </>
   );
 };
