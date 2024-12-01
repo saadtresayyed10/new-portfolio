@@ -12,35 +12,34 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const links = [
     {
       label: "Projects",
-      href: "#",
+      href: "/projects",
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "About",
-      href: "#",
+      href: "/about",
       icon: (
         <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Services",
-      href: "#",
+      href: "/services",
       icon: (
         <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Resume",
-      href: "#",
+      href: "/resume",
       icon: (
         <IconPageBreak className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
