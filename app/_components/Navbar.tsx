@@ -80,15 +80,6 @@ export function Navbar() {
                 <IconBrandLinkedin className="w-4 h-4 text-muted-foreground" />
               </Link>
               <Link href="/">
-                <IconBrandX className="w-4 h-4 text-muted-foreground" />
-              </Link>
-              <Link href="/">
-                <IconBrandInstagram className="w-4 h-4 text-muted-foreground" />
-              </Link>
-              <Link href="/">
-                <IconBrandYoutube className="w-4 h-4 text-muted-foreground" />
-              </Link>
-              <Link href="/">
                 <IconBrandGithub className="w-4 h-4 text-muted-foreground" />
               </Link>
               <Link href="/">
