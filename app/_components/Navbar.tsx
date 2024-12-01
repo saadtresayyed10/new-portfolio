@@ -9,6 +9,9 @@ import {
   IconBrandLinkedin,
   IconBrandX,
   IconBrandInstagram,
+  IconBrandYoutube,
+  IconBrandGithub,
+  IconBrandDiscord,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -74,6 +77,15 @@ export function Navbar() {
               <Link href="/">
                 <IconBrandInstagram className="w-4 h-4 text-muted-foreground" />
               </Link>
+              <Link href="/">
+                <IconBrandYoutube className="w-4 h-4 text-muted-foreground" />
+              </Link>
+              <Link href="/">
+                <IconBrandGithub className="w-4 h-4 text-muted-foreground" />
+              </Link>
+              <Link href="/">
+                <IconBrandDiscord className="w-4 h-4 text-muted-foreground" />
+              </Link>
             </div>
           </div>
         </SidebarBody>
@@ -99,7 +111,7 @@ export const Logo = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "backOut", delay: 0.4 }}
-        className="font-bold lg:text-xl text-black dark:text-white whitespace-pre font-parkinsans uppercase"
+        className="font-bold text-xl text-black dark:text-white whitespace-pre font-parkinsans uppercase"
       >
         Saad Sayyed
       </motion.span>
