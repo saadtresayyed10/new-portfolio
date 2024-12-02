@@ -30,6 +30,8 @@ export const DATA = {
     "Java",
     "C++",
     "C",
+    "TailwindCSS",
+    "Github",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
