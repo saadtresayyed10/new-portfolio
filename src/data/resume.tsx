@@ -10,8 +10,8 @@ export const DATA = {
   description:
     "I am a Web Developer, Software Engineer, Gothic Architect and Fashion Designer. I love creating art pieces so come on over and tune in with my work!",
   summary:
-    "I am a working web developer and also I have my own agency called [Groven](https://groven-portfolio.vercel.app) that offers many services to solve janky mundane problems. I am an architect as well that is building, designing and working on revival of [Gothic Cathedrals](https://www.stpatrickspune.in/) in my town. I am very much drowned in the fashion industry, so I create avant-garde outfits which are heavily inspired from [Rick Owens, Comme Des Garcon, Vetements, Maison Margiela and things of that nature](https://www.rickowens.eu/en/IN).",
-  avatarUrl: "/me.png",
+    "I am a working web developer and also I have my own agency called [Groven](https://groven-portfolio.vercel.app) that offers many services to solve janky mundane problems. I am an architect as well that is building, designing and working on revival of [Gothic Cathedrals](https://www.stpatrickspune.in/) in my town. I am very much drowned in the fashion industry, so I create avant-garde outfits which are heavily inspired from [Rick Owens, Comme Des Garcon, Vetements, Maison Margiela and things of that nature](https://www.rickowens.eu/en/IN).  Click to check my [CV](https://read.cv/saadsayyed) here.",
+  avatarUrl: "/saad.jpg",
   skills: [
     "React",
     "Springboot",
@@ -144,30 +144,54 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Euphoria",
+      href: "https://euphoriabygrove.vercel.app",
+      dates: "July 2024 - Aug 2024",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "All-in-One Workspace: Euphoria is a versatile productivity tool that combines brainstorming, project management, task tracking, visual collaboration, and team alignment into a single platform.",
       technologies: [
         "Next.js",
         "Typescript",
         "PostgreSQL",
-        "Prisma",
+        "Convex",
         "TailwindCSS",
-        "Stripe",
         "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://euphoriabygrove.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/euphoria.png",
+      video:
+        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+    },
+    {
+      title: "Jade",
+      href: "https://jadebygrove.vercel.app",
+      dates: "July 2024 - Aug 2024",
+      active: true,
+      description:
+        "Users can create pages, subpages, and databases that are fully customizable to suit personal or team workflows, with templates available for quick setup. It supports integrations with tools like Notion, Slack, Google Drive, and Trello, as well as API access for customized workflows.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "PostgreSQL",
+        "Convex",
+        "TailwindCSS",
+        "Shadcn UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://jadebygrove.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/jade.png",
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
