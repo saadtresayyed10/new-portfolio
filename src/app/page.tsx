@@ -174,7 +174,13 @@ export default function Page() {
                     cols={50}
                     rows={5}
                     placeholder="Your Message..."
-                    className="px-4 py-2 border-2 border-black dark:border-white rounded-lg shadow-md"
+                    className="lg:block hidden px-4 py-2 border-2 border-black dark:border-white rounded-lg shadow-md"
+                  ></textarea>
+                  <textarea
+                    cols={22}
+                    rows={5}
+                    placeholder="Your Message..."
+                    className="block lg:hidden px-4 py-2 border-2 border-black dark:border-white rounded-lg shadow-md"
                   ></textarea>
                 </div>
                 <div className="flex justify-center items-center">
