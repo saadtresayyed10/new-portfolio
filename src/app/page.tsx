@@ -1,4 +1,3 @@
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -6,14 +5,13 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
-import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh] space-y-10 font-ranade">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -116,9 +114,6 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
-                </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Check out my latest work
                 </h2>
@@ -158,17 +153,36 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
-              </p>
+              <form>
+                <div className="flex justify-start items-start flex-col gap-y-6 p-10">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="px-4 py-2 border-2 border-black dark:border-white rounded-lg shadow-md"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="px-4 py-2 border-2 border-black dark:border-white rounded-lg shadow-md"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="px-4 py-2 border-2 border-black dark:border-white rounded-lg shadow-md"
+                  />
+                  <textarea
+                    cols={50}
+                    rows={5}
+                    placeholder="Your Message..."
+                    className="px-4 py-2 border-2 border-black dark:border-white rounded-lg shadow-md"
+                  ></textarea>
+                </div>
+                <div className="flex justify-center items-center">
+                  <button className="rounded-full px-10 p-2 bg-black text-white dark:bg-white dark:text-black">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </BlurFade>
         </div>
